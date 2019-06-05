@@ -12,8 +12,15 @@ C++ code test to evaluate my development style.
   b) C++ class generation.
   c) matrix operations.
   
-2. Design:
+3. Design:
   a) specification document.
   b) design document.
   c) peer review.
   
+4. Implementation:
+
+5. Test:
+
+6. Peer review:
+
+7. Final submittle.
