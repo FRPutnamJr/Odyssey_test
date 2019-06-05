@@ -16,12 +16,12 @@ C++ code test to evaluate my development style.
 3. Design:
   a) specification document.
   b) design document.
-  c) peer review.
+  c) peer review. (Ted Brown)
   
 4. Implementation:
 
-5. Peer review:
+5. Peer review:(Ted Brown)
 
 6. Test:
 
-7. Final submittle:
+7. Submit:
