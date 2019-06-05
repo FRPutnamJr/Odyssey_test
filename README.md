@@ -19,8 +19,8 @@ C++ code test to evaluate my development style.
   
 4. Implementation:
 
-5. Test:
+5. Peer review:
 
-6. Peer review:
+6. Test:
 
-7. Final submittle.
+7. Final submittle:
