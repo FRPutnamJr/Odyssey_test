@@ -2,11 +2,11 @@
 C++ code test to evaluate my development style.
 
 1. Setup:
-  a) Print out test requirements.
-  b) Install Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017 and 2019.
-  c) Install Microsoft Visual Studio 2019 Professional (trial).
-  d) Download 2014-12-01-CEC Software Architecture Materials by Jacob Beningo.
-  e) Setup GetHub repository.
+  a) print out Odyssey requirements.
+  b) install Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017 and 2019.
+  c) install Microsoft Visual Studio 2019 Professional (trial).
+  d) download 2014-12-01-CEC Software Architecture Materials by Jacob Beningo.
+  e) setup GetHub repository.
   
 2. Review:
   a) test requirements.
@@ -16,7 +16,8 @@ C++ code test to evaluate my development style.
 3. Design:
   a) specification document.
   b) design document.
-  c) peer review. (Ted Brown)
+  c) test document.
+  d) peer review. (Ted Brown)
   
 4. Implementation:
 
@@ -25,3 +26,5 @@ C++ code test to evaluate my development style.
 6. Test:
 
 7. Submit:
+  a) final report.
+  b) code.
