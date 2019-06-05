@@ -6,6 +6,7 @@ C++ code test to evaluate my development style.
   b) Install Microsoft Visual C++ Redistributable for Visual Studio 2015, 2017 and 2019.
   c) Install Microsoft Visual Studio 2019 Professional (trial).
   d) Download 2014-12-01-CEC Software Architecture Materials by Jacob Beningo.
+  e) Setup GetHub repository.
   
 2. Review:
   a) test requirements.
