@@ -1,5 +1,5 @@
 # Odyssey_test
-C++ code test to evaluate my development style.
+C++ code test to evaluate my Software Engineering skills.
 
 1. Setup:
   a) print out Odyssey requirements.
@@ -10,24 +10,24 @@ C++ code test to evaluate my development style.
   
 2. Review:
   a) customer requirements.
-  b) C++ class generation.
-     *  Introduction to C++ from edX.
-  c) matrix operations.
-     * Matrix Algebra for Engineers on coursera.
-     * https://en.wikipedia.org/wiki/Matrix_multiplaction
+  b) C++ class generation.(Introduction to C++ from edX)
+  c) matrix operations.(Matrix Algebra for Engineers on coursera; https://en.wikipedia.org/wiki/Matrix_multiplaction)
   
 3. Design:
-  a) specification document.
-  b) design document.
-  c) test document.
-  d) peer review. (Ted Brown)
+  a) Customer requirements document.
+  b) Software Requirements Specification document.
+  c) Software Unit Test document.
+
+4. Peer review with Ted Brown.
   
-4. Implementation:
+5. Implementation:
 
-5. Peer review:(Ted Brown)
+6. Peer review with Ted Brown.
 
-6. Test:
+7. Test:
 
-7. Submit:
+8. Final peer review with Ted Brown.
+
+9. Submit:
   a) final report.
   b) code.
