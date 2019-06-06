@@ -9,7 +9,7 @@ C++ code test to evaluate my development style.
   e) setup GetHub repository.
   
 2. Review:
-  a) test requirements.
+  a) customer requirements.
   b) C++ class generation.
   c) matrix operations.
   
