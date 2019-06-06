@@ -11,7 +11,10 @@ C++ code test to evaluate my development style.
 2. Review:
   a) customer requirements.
   b) C++ class generation.
+     *  Introduction to C++ from edX.
   c) matrix operations.
+     * Matrix Algebra for Engineers on coursera.
+     * https://en.wikipedia.org/wiki/Matrix_multiplaction
   
 3. Design:
   a) specification document.
