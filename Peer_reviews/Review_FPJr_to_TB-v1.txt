@@ -1,0 +1,68 @@
+Review Notes on /Odyssey_test/blob/master/Odyssey-Software_Requirements_Specifications.pdf
+Section 1.6
+1) item 3 Link appears broken, https://en.wikipedia.org/wiki/Matrix_multiplaction should be https://en.wikipedia.org/wiki/Matrix_multiplication  [DONE]
+i think the same issue exists on the repository readme
+
+Section 2.1 
+second paragraph
+1) The class will provide [DONE]
+2) Unit tests are included as part of the development. [DONE]
+
+Section 2.6
+1) could there be a set for multiple matrix elements, ie you have a 3x3 matrix and set the elements at 1x1 to 2x2 with a 2x2 matrix. [Enhancement] 
+2) What  about getting a  submatrix? [Enhancement] 
+
+3) What sort of protections  will be in  place for the matrix operations? (checking dimensions of the input matrices,unit types etc) [ToDo]
+	This makes me think the matrix should have a header with Matrix element type, Number of rows, Number of columns, Pointer to array.
+
+4) Which operations will be functions and which functions will be overloaded operators(ie: how would i apply a scalar to the matrix, or multiply two matrices together)? [ToDo]
+	functions: get_dimensions_of(); get_size_of();
+	overloaded operators: get_element_from(); set_element_to();		
+
+5) Would I be able to combine matrices, either by an append or concatenante function or by { GOOD! - using the two submatrices as inputs to initialize a new matrix}? [Enhancement]
+6) How will it handle mixed unit type matrix operations? [Enhancement] 
+
+7) Will there be get functions to read the dimensions of the matrix? [ToDo] void get_dimensions_of(Matrix, int Rows, int Columns); // Rows & Columns modified
+	This makes me think the matrix should have a header with Matrix element type, Number of rows, Number of columns, Pointer to array.
+	
+8) How will a user know the size of the matrix? [ToDo]  uint get_size_of(Matrix); // Returns size in bytes.
+	This makes me think the matrix should have a header with Matrix element type, Number of rows, Number of columns, Pointer to array.
+
+Overall notes/questions
+1) What happens if you send a unit type that isn't supported(such as a string or other complex data types)? [ToDo] 
+	Return none zero integer.
+
+2) Will the set/get functions detect inappopriate data types for the matrix(ie, calling the .set function of a int matrix with a floating point value)? [ToDo]
+	This makes me think the matrix should have a header with Matrix element type, Number of rows, Number of columns, Pointer to array.
+
+3) Can i set the entire matrix at once? [ToDo] Yes, by providing a list of values at instantiation. 
+	OSR_matrix matrix_2_by_3(Pointer_to_header, TWO_ROWS, THREE_COLUMNS, SINT_TYPE) = ({1,-3,5},{-2,4,-6});
+
+4) What values are the matrix elements initialized to? [ToDo] 0 or 0.0 if no list of values is provided.
+
+5) Will the class have additional constructors, for example to allow setting all of the matrix elements? [Enhancement]
+6) Will the class have additional constructors, for example combining matrices into a new matrix? [Enhancement]
+7) Will i be able to cast the matrix as a different unit type(or retrieve a floating point or integer version of a matrix)? [Enhancement]
+
+8) How will the matrix elements be stored? (in an array, linked list, database, etc.) [ToDo]
+	This makes me think the matrix should have a header with Matrix element type, Number of rows, Number of columns, Pointer to array.
+
+Odyssey_test/blob/master/Software_Unit_Tests.pdf
+1) What if not all arguments of the constructor are sent, ie only one argument? [ToDo] Compiler should catch this.
+
+2) What unit type are the arguments of the constructor? [ToDo] int Rows, int Columns, enumeration Matrix_element_type
+
+3) What if i call the contstructor with the arguments 1.7, 17.8 and FLOAT_TYPE? [ToDo] Compiler should catch this.
+
+4) what if i get or set an invalid index ie: set(1.7,1.9,false)? [ToDo] Compiler should catch this.
+
+I think there needs to be more unit tests defined, 
+1) what function is being called? [ToDo] 
+2) what are the arguments? [ToDo] 
+3) what range of values will be tested as input? [ToDo] 
+4) How will it validate that the result of the operation is successful? [ToDo]
+
+UT7 the input line isn't aligned [ToDo]
+
+
+

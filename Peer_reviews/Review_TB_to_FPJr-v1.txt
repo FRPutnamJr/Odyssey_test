@@ -1,0 +1,43 @@
+Review Notes on /Odyssey_test/blob/master/Odyssey-Software_Requirements_Specifications.pdf
+Section 1.6 
+item 3 Link appears broken, https://en.wikipedia.org/wiki/Matrix_multiplaction should be https://en.wikipedia.org/wiki/Matrix_multiplication 
+i think the same issue exists on the repository readme
+
+Section 2.1
+second paragraph
+The class will provide
+Unit tests are included as part of the development.
+
+Section 2.6
+could there be a set for multiple matrix elements, ie you have a 3x3 matrix and set the elements at 1x1 to 2x2 with a 2x2 matrix 
+What  about getting a  submatrix
+What sort of protections  will be in  place for the matrix operations (checking dimensions of the input matrices,unit types etc)
+Which operations will be functions and which functions will be overloaded operators(ie: how would i apply a scalar to the matrix, or multiply two matrices together?)
+Would I be able combine matrices, either by an append or concatenante function or by using the two submatrices as inputs to initialize a new matrix.
+How will it handle mixed unit type matrix operations? 
+Will there be get functions to read the dimensions of the matrix? how will a user know the size of the matrix.
+
+Overall notes/questions
+What happens if you send a unit type that isn't supported(such as a string or other complex data types)
+Will the set/get functions detect inappopriate data types for the matrix(ie, calling the .set function of a int matrix with a floating point value)
+Can i set the entire matrix at once?
+What values are the matrix elements initialized to?
+Will the class have additional constructors, for example to allow setting all of the matrix elements or combining matrices into a new matrix.
+will i be able to cast the matrix as a different unit type(or retrieve a floating point or integer version of a matrix)
+How will the matrix elements be stored? in an array, linked list, database, etc.
+
+Odyssey_test/blob/master/Software_Unit_Tests.pdf
+What if not all arguments of the constructor are sent, ie only one argument
+
+what unit type are the arguments of the constructor?
+What if i call the contstructor with the arguments 1.7, 17.8 and FLOAT_TYPE
+
+what if i get or set an invalid index ie: set(1.7,1.9,false)
+
+I think there needs to be more unit tests defined, what function is being called, what are the arguments, what range of values will be tested as input, etc. 
+How will it validate that the result of the operation is successful.
+
+UT7 the input line isn't aligned
+
+
+
