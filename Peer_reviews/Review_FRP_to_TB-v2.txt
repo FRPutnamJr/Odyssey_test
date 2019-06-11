@@ -1,0 +1,37 @@
+The requirements look good,
+
+I would say two 2 functions would be nice to have as class members one that returns the row count and one that returns the column count, these could be called if you pass another matrix to the function to check the dimension, and other things. Your function (getDimensions) combines these, so you may just use those. 
+[To-do: function getDimensions(Row_count, Column_count);  // modifies Row_count &, Column_count]
+[To-do: function uint get_Row(void);  // Returns Row_count]
+[To-do: function uint get_Column(void);  // Returns Column_count]
+
+I assume the error codes will be defined as an enumeration. 
+[To-do: I’m having second thoughts about the return error mechanism. 
+If all functions return an error code then will have to use modifiable input parameters. 
+(i.e. Error_t get_Column(uint Column_count);  // modifies Column_count). 
+Looking at try, throw, and catch mechanism.]
+
+The Unit test document (maybe the requirements also, but I didn't notice it) has the date as friday june 10, so that needs to get updated. [To-do:]
+
+The table of contents on the unit test document and the title need to be updated to reflect the document. 
+[To-do:]
+
+I think the matrix class might work in the following way	[I agree]
+
+matrix_t myMatrix = new matrix_t(3,2,integer)
+
+myMatrix.set(row,column,value);
+
+integer value = myMatrix.get(row,column);
+
+matrix_t myMatrix = myMatrix.transpose(); [GOOD!]
+
+myMatrix = myMatrix*scalar_int
+
+The unit tests seem good; it just depends on how the class functions work as to how the unit tests will be formulated, so some changes might be needed depending on how things are implemented. i think the coverage so far is good. Might need to work on how the unit tests will be implemented (it will probably be a program that is run with predefined input and operations and then code to validate that the operations result in what the expected output is)
+
+Let me know if you want to discuss anything in more detail
+
+- Ted
+
+
