@@ -11,7 +11,9 @@
 /*************** MODULE REVISION LOG ******************************************
 *
 *    Date    Software Version    Initials   Description
-*  2019-06-11       0.1              FRP      Created.
+*  2019/06/11       0.1            FRP      Created.
+*  2019/06/12       0.2            FRP      Added test for constructor, destructor, overloaded get_element, overloaded set_element.
+*  2019/06/13       0.3            FRP      Added test for overloaded operator=, overloaded operator+=, overloaded+.
 *
 *******************************************************************************/
 /** @file Odeyssey_matrix.cpp
@@ -72,6 +74,8 @@ constexpr auto CONSTANT = 5;
   *  ----------------------
   *    Date      Software Version    Initials   Description
   *  2019/06/11         0.1            FRP      Function Created.
+  *  2019/06/12         0.2            FRP      Added test for constructor, destructor, overloaded get_element, overloaded set_element.
+  *  2019/06/13         0.3            FRP      Added test for overloaded operator=, overloaded operator+=, overloaded+.
   *
   *******************************************************************************/
 
@@ -87,11 +91,77 @@ int main()
 	unsigned Column_count = 0;
 	unsigned Matrix_size  = 0;
 
+	OSR_matrix Signed_integer_matrix_A = OSR_matrix(2, 2, OSR_matrix::SINT_TYPE);
+	OSR_matrix Signed_integer_matrix_B = OSR_matrix(2, 2, OSR_matrix::SINT_TYPE);
+	OSR_matrix Signed_integer_matrix_C = OSR_matrix(2, 2, OSR_matrix::SINT_TYPE);
+
+	int A11u = 0;
+	int A12u = 0;
+	int A21u = 0;
+	int A22u = 0; 
+	
+	Signed_integer_matrix_C.set_element(1, 1, A11u);
+	Signed_integer_matrix_C.set_element(1, 2, A12u);
+	Signed_integer_matrix_C.set_element(2, 1, A21u);
+	Signed_integer_matrix_C.set_element(2, 2, A22u);
+
+	A11u = 11;
+	A12u = 12;
+	A21u = 21;
+	A22u = 22;
+
+	Signed_integer_matrix_A.set_element(1, 1, A11u);
+	Signed_integer_matrix_A.set_element(1, 2, A12u);
+	Signed_integer_matrix_A.set_element(2, 1, A21u);
+	Signed_integer_matrix_A.set_element(2, 2, A22u);
+
+	Signed_integer_matrix_B.set_element(1, 1, A11u);
+	Signed_integer_matrix_B.set_element(1, 2, A12u);
+	Signed_integer_matrix_B.set_element(2, 1, A21u);
+	Signed_integer_matrix_B.set_element(2, 2, A22u);
+
+	Signed_integer_matrix_C  = Signed_integer_matrix_A;
+
+	A11u = 0;
+	A12u = 0;
+	A21u = 0;
+	A22u = 0;
+
+	Signed_integer_matrix_C.get_element(1, 1, &A11u);
+	Signed_integer_matrix_C.get_element(1, 2, &A12u);
+	Signed_integer_matrix_C.get_element(2, 1, &A21u);
+	Signed_integer_matrix_C.get_element(2, 2, &A22u);
+
+	std::cout << "   " << A11u << "   " << A12u << "\n" << "   " << A21u << "   " << A22u << "\n\n";
+
+	
+	Signed_integer_matrix_C += Signed_integer_matrix_B;
+
+	A11u = 0;
+	A12u = 0;
+	A21u = 0;
+	A22u = 0;
+
+	Signed_integer_matrix_C.get_element(1, 1, &A11u);
+	Signed_integer_matrix_C.get_element(1, 2, &A12u);
+	Signed_integer_matrix_C.get_element(2, 1, &A21u);
+	Signed_integer_matrix_C.get_element(2, 2, &A22u);
+
+	std::cout << "   " << A11u << "   " << A12u << "\n" << "   " << A21u << "   " << A22u << "\n\n";
+
+
+	
+	
+	
+	
+	/*
+	
+	
 	OSR_matrix* Byte_matrix = new OSR_matrix(2,2,OSR_matrix::BYTE_TYPE);
 
 	Row_count    = Byte_matrix->get_number_of_rows();
 	Column_count = Byte_matrix->get_number_of_columns();
-	Matrix_size  = Byte_matrix->get_size();
+	Matrix_size  = Byte_matrix->get_size_in_bytes();
 
 	std::cout << "Byte Matrix   Rows " << Row_count << "   Columns " << Column_count << "   Size " << Matrix_size << "\n";
 
@@ -115,7 +185,7 @@ int main()
 	Byte_matrix->get_element(2, 1, &A21b);
 	Byte_matrix->get_element(2, 2, &A22b);
 
-	std::cout << "   " << A11b << "   " << A12b << "\n" << "   " << A21b << "   " << A22b << "\n";
+	std::cout << "   " << A11b << "   " << A12b << "\n" << "   " << A21b << "   " << A22b << "\n\n";
 	
 	
 	
@@ -124,7 +194,7 @@ int main()
 
 	Row_count    = Unsigned_integer_matrix->get_number_of_rows();
 	Column_count = Unsigned_integer_matrix->get_number_of_columns();
-	Matrix_size  = Unsigned_integer_matrix->get_size();
+	Matrix_size  = Unsigned_integer_matrix->get_size_in_bytes();
 
 	std::cout << "Unsigned Interger Matrix   Rows " << Row_count << "   Columns " << Column_count << "   Size " << Matrix_size << "\n";
 
@@ -150,12 +220,13 @@ int main()
 
 	std::cout << "   " << A11u << "   " << A12u << "\n" << "   " << A21u << "   " << A22u << "\n\n";
 
+//	delete Unsigned_integer_matrix;
 
 	OSR_matrix* Signed_integer_matrix = new OSR_matrix(2, 2, OSR_matrix::SINT_TYPE);
 
 	Row_count    = Signed_integer_matrix->get_number_of_rows();
 	Column_count = Signed_integer_matrix->get_number_of_columns();
-	Matrix_size  = Signed_integer_matrix->get_size();
+	Matrix_size  = Signed_integer_matrix->get_size_in_bytes();
 
 	std::cout << "Signed Integer Matrix   Rows " << Row_count << "   Columns " << Column_count << "   Size " << Matrix_size << "\n";
 
@@ -187,7 +258,7 @@ int main()
 
 	Row_count    = Float_matrix->get_number_of_rows();
 	Column_count = Float_matrix->get_number_of_columns();
-	Matrix_size  = Float_matrix->get_size();
+	Matrix_size  = Float_matrix->get_size_in_bytes();
 
 	std::cout << "Float Matrix   Rows " << Row_count << "   Columns " << Column_count << "   Size " << Matrix_size << "\n";
 
@@ -212,7 +283,7 @@ int main()
 	Float_matrix->get_element(2, 2, &A22f);
 
 	std::cout << "   " << A11f << "   " << A12f << "\n" << "   " << A21f << "   " << A22f << "\n\n";
-
+*/
 
 }
 
