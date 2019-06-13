@@ -22,7 +22,9 @@ C++ code test to evaluate my Software Engineering skills.
   
 5. Implementation:
   a) Constructors, Destructor, overloaded get_element, overloaded set_element
-  b) overloaded operator +, overloaded operator * (scalar and matrix),
+  b) overloaded operator=, overloaded operator+=
+  c) overloaded operator*= (scalar and matrix)
+  d) overloaded transpse
   
 6. Peer review with Ted Brown.
 
