@@ -21,7 +21,9 @@ C++ code test to evaluate my Software Engineering skills.
 4. Peer review with Ted Brown.
   
 5. Implementation:
-
+  a) Constructors, Destructor, overloaded get_element, overloaded set_element
+  b) overloaded operator +, overloaded operator * (scalar and matrix),
+  
 6. Peer review with Ted Brown.
 
 7. Test:
