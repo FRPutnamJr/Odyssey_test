@@ -24,7 +24,7 @@ C++ code test to evaluate my Software Engineering skills.
   a) Constructors, Destructor, overloaded get_element, overloaded set_element
   b) overloaded operator=, overloaded operator+=
   c) overloaded operator*= (scalar and matrix)
-  d) overloaded transpse
+  d) overloaded transpose
   
 6. Peer review with Ted Brown.
 
