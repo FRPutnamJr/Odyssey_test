@@ -3,7 +3,7 @@
 * Filename              :   OSR_matrix.h
 * Author                :   Frank Putnam, Jr.
 * Origin Date           :   2019-06-08
-* Version               :   0.5
+* Version               :   1.0
 * Compiler              :   Microsoft Visual Studio 2019 C30 v3.30c
 * Target                :   PC
 * Notes                 :   None
@@ -17,6 +17,7 @@
 *                                             Implemented overloaded operator=, overloaded operator+=, overloaded+.
 *  2019/06/14       0.4              FRP      Implemented overloaded operator*= (Scaler Multiplication).
 *  2019/06/15       0.5              FRP      Implemented overloaded Transpose.
+*  2019/06/17       1.0              FRP      Release
 *
 *****************************************************************************/
 /** @file OSR_matrix.h
@@ -68,7 +69,7 @@
   *******************************************************************************/
 
 
-  #ifdef __cplusplus
+#ifdef __cplusplus
 extern "C" {
 #endif
 

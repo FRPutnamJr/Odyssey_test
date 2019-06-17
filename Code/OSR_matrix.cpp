@@ -3,7 +3,7 @@
 * Filename              :   OSR_matrix.cpp
 * Author                :   Frank Putnam, Jr.
 * Origin Date           :   2019-06-11
-* Version               :   0.5
+* Version               :   1.0
 * Compiler              :   Microsoft Visual Studio 2019 C30 v3.30c
 * Target                :   PC
 * Notes                 :   None
@@ -17,6 +17,7 @@
 *                                             Implemented overloaded operator=, overloaded operator+=, overloaded+.
 *  2019/06/14       0.4              FRP      Implemented overloaded operator*= (Scaler Multiplication).
 *  2019/06/15       0.5              FRP      Implemented overloaded Transpose.
+*  2019/06/17       1.0              FRP      Release.
 *
 *******************************************************************************/
 /** @file Odeyssey_matrix.cpp
@@ -53,36 +54,6 @@ constexpr auto CONSTANT = 5;
 
 /******************************************************************************
 * Function Definitions
-*******************************************************************************/
-/******************************************************************************
-* Function : main()
-*/
-/*
-* @section Description Description:
-*
-*  This function is used to
-*
-* @param  		None.
-*
-* @return 		None.
-*
-* @section Example Example:
-* @code
-*    main();
-* @endcode
-*
-*
-*  ----------------------
-*  - HISTORY OF CHANGES -
-*  ----------------------
-*    Date      Software Version    Initials   Description
-*  2019/06/11       0.1              FRP      Function Created.
-*  2019/06/12       0.2              FRP      Implemented constructor, destructor, overloaded get_element, overloaded set_element.
-*  2019/06/13       0.3              FRP      Reworked overloaded get_element, overloaded set_element.
-*                                             Implemented overloaded operator=, overloaded operator+=, overloaded+.
-*  2019/06/14       0.4              FRP      Implemented overloaded operator*= (Scaler Multiplication).
-*  2019/06/15       0.5              FRP      Implemented overloaded Transpose.
-*
 *******************************************************************************/
 
 #include "OSR_matrix.h"
